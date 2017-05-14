@@ -1,0 +1,23 @@
+# maven
+
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: demo-maven-repo
+spec:
+  serviceName: "demo-maven-repo"
+  replicas: 1
+  template:
+      metadata:
+        labels:
+          app: demo-maven-repo
+      spec:
+        containers:
+        - image: sonatype/nexus3:3.0.0
+          imagePullPolicy: IfNotPresent
+          name: demo-maven-repo
+          ports:
+          - containerPort: 8081
+          - containerPort: 8082
+          - containerPort: 8083
+
