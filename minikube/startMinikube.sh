@@ -8,6 +8,7 @@ ipaddr=$(ipconfig getifaddr en0)
 export http_proxy=http://$ipaddr:8118
 export https_proxy=http://$ipaddr:8118
 
+# minikube has a bug that docker-env will not be updated if vm exists, so we update it manually.
 # replace minikube existing config file
 sed -i "" "s#\"HTTP_PROXY=http:.*,\$#\"HTTP_PROXY=$http_proxy\",#" /Users/dongyan/.minikube/machines/minikube/config.json
 sed -i "" "s#\"HTTPS_PROXY=http:.*,\$#\"HTTPS_PROXY=$http_proxy\",#" /Users/dongyan/.minikube/machines/minikube/config.json
