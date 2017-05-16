@@ -1,0 +1,549 @@
+oh-my-zsh diagnostic dump
+
+omz_diagdump_20170515-132516.txt
+
+2017年 5月15日 星期一 13时25分16秒 CST
+Darwin shevyan 16.0.0 Darwin Kernel Version 16.0.0: Mon Aug 29 17:56:20 PDT 2016; root:xnu-3789.1.32~3/RELEASE_X86_64 x86_64
+OSTYPE=darwin16.0
+ZSH_VERSION=5.2
+User: dongyan
+umask: 022
+
+OS Version: Mac OS X 10.12 build 16A323
+
+sh is     /bin/sh               SHA 38210e70d1b39c28290c0ccfce5b69c4638b50ce
+zsh is    /bin/zsh              SHA 362d180bdd4c1ec6e9165213f9856a8801d110ea
+ksh is    /bin/ksh              SHA 7f6d64596b5c75a254d3afa72e0c6c86efc6057b
+bash is   /bin/bash             SHA 7f1f6c042cd60431e6b9c4c34d83d9b0c4999a30
+sed is    /usr/bin/sed          SHA bc498bf7fbfa76a736e6ca039e09cea38d80c616
+cat is    /bin/cat              SHA 87ac80e292cb954cc207df159ea2927040311690
+grep is   grep: aliased to grep  --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} 
+ls is     ls: aliased to ls -G 
+find is   /usr/bin/find         SHA 9628497925d06a17ed802bab5b2313763e8c2635
+git is    /usr/local/bin/git    SHA 48a0d0529fdd9f56ff4f680db56662d58a9cc978 ( -> /usr/local/Cellar/git/2.7.0/bin/git )
+posh: not found
+
+Command Versions:
+zsh: zsh 5.2 (x86_64-apple-darwin16.0)
+this zsh session: 5.2
+bash: GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin16)
+git: git version 2.7.0
+grep: grep (BSD grep) 2.5.1-FreeBSD
+
+Core command check:
+builtin 'log' has been redefined
+/usr/bin/log
+SOME CORE COMMANDS HAVE BEEN REDEFINED: log
+
+Process state:
+pwd: /Users/dongyan/k8s
+  UID   PID  PPID   C STIME   TTY           TIME CMD
+  501  9876   336   0  1:23下午 ttys004    0:00.79 -zsh
+    0 10137  9876   0  1:25下午 ttys004    0:00.01 ps -fT
+FPATH=/Users/dongyan/.oh-my-zsh/plugins/kubectl:/Users/dongyan/.oh-my-zsh/plugins/osx:/Users/dongyan/.oh-my-zsh/plugins/git:/Users/dongyan/.oh-my-zsh/functions:/Users/dongyan/.oh-my-zsh/completions:/usr/local/share/zsh/site-functions:/usr/share/zsh/site-functions:/usr/share/zsh/5.2/functions
+LANG=zh_CN
+LC_CTYPE=zh_CN
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/dongyan/Documents/gopath/bin:/usr/local/go/bin
+TERM=linux
+TTY=/dev/ttys004
+TTYIDLE=-1
+ZSH=/Users/dongyan/.oh-my-zsh
+ZSH_CACHE_DIR=/Users/dongyan/.oh-my-zsh/cache
+ZSH_COMPDUMP='/Users/dongyan/.zcompdump-Dong的MacBook Pro-5.2'
+ZSH_CUSTOM=/Users/dongyan/.oh-my-zsh/custom
+ZSH_DISABLE_COMPFIX=true
+ZSH_EVAL_CONTEXT=toplevel:shfunc:shfunc
+ZSH_NAME=zsh
+ZSH_PATCHLEVEL=zsh-5.2-0-gc86c20a
+ZSH_SPECTRUM_TEXT='Arma virumque cano Troiae qui primus ab oris'
+ZSH_SUBSHELL=1
+ZSH_THEME=amuse
+ZSH_THEME_GIT_PROMPT_CLEAN=''
+ZSH_THEME_GIT_PROMPT_DIRTY='%{[31m%}!'
+ZSH_THEME_GIT_PROMPT_PREFIX=' on %{[35m%}\uE0A0 '
+ZSH_THEME_GIT_PROMPT_SUFFIX='%{[00m%}'
+ZSH_THEME_GIT_PROMPT_UNTRACKED='%{[32m%}?'
+ZSH_THEME_TERM_TAB_TITLE_IDLE='%15<..<%~%<<'
+ZSH_THEME_TERM_TITLE_IDLE='%n@%m: %~'
+ZSH_VERSION=5.2
+plugins=( git osx kubectl )
+precmd_functions=( omz_termsupport_precmd )
+preexec_functions=( omz_termsupport_preexec )
+
+Exported:
+Apple_PubSub_Socket_Render COMMAND_MODE GOPATH GOROOT HOME LANG LC_CTYPE LESS LOGNAME LSCOLORS PAGER PATH SECURITYSESSIONID SHELL SSH_AUTH_SOCK TERM TMPDIR USER XPC_FLAGS XPC_SERVICE_NAME ZSH __CF_USER_TEXT_ENCODING
+
+Locale:
+LANG="zh_CN"
+LC_COLLATE="zh_CN"
+LC_CTYPE="zh_CN"
+LC_MESSAGES="zh_CN"
+LC_MONETARY="zh_CN"
+LC_NUMERIC="zh_CN"
+LC_TIME="zh_CN"
+LC_ALL=
+
+Zsh configuration:
+setopt: alwaystoend autopushd completeinword extendedhistory noflowcontrol histexpiredupsfirst histignoredups histignorespace histverify incappendhistory interactive interactivecomments localoptions localpatterns localtraps login longlistjobs promptsubst sharehistory shinstdin
+
+zstyle:
+cache-path
+        :completion::complete:* /Users/dongyan/.oh-my-zsh/cache
+command
+        :completion:*:*:*:*:processes 'ps -u dongyan -o pid,user,comm -w -w'
+ignored-patterns
+        :completion:*:*:*:users adm amanda apache at avahi avahi-autoipd beaglidx bin cacti canna clamav daemon dbus distcache dnsmasq dovecot fax ftp games gdm gkrellmd gopher hacluster haldaemon halt hsqldb ident junkbust kdm ldap lp mail mailman mailnull man messagebus mldonkey mysql nagios named netdump news nfsnobody nobody nscd ntp nut nx obsrun openvpn operator pcap polkitd postfix postgres privoxy pulse pvm quagga radvd rpc rpcuser rpm rtkit scard shutdown squid sshd statd svn sync tftp usbmux uucp vcsa wwwrun xfs '_*'
+list-colors
+        :completion:*:*:kill:*:processes '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+        :completion:* ''
+matcher-list
+        :completion:* 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+menu
+        :completion:*:*:*:*:* select
+single-ignored
+        * show
+tag-order
+        :completion:*:cd:* local-directories directory-stack path-directories
+url-globbers
+(eval)  :url-quote-magic 'zmodload -i zsh/parameter;
+	 reply=( noglob
+		 ${(k)galiases[(R)(* |)(noglob|urlglobber|globurl) *]:-}
+		 ${(k)aliases[(R)(* |)(noglob|urlglobber|globurl) *]:-} )'
+url-local-schema
+        :urlglobber ftp file
+url-metas
+        :url-quote-magic:* '*?[]^(|)~#{}='
+url-other-schema
+        :urlglobber http https ftp
+url-seps
+(eval)  :url-quote-magic:* 'reply=(";&<>${histchars[1]}")'
+use-cache
+        :completion::complete:* 1
+
+compaudit output:
+
+$fpath directories:
+ls: /Users/dongyan/.oh-my-zsh/completions: No such file or directory
+ls: /Users/dongyan/.oh-my-zsh/functions: No such file or directory
+drwxr-xr-x    4 dongyan  staff    136 12 29 13:43 /Users/dongyan/.oh-my-zsh/plugins/git
+drwxr-xr-x    3 dongyan  staff    102  8 27  2016 /Users/dongyan/.oh-my-zsh/plugins/kubectl
+drwxr-xr-x    4 dongyan  staff    136  3  9 20:00 /Users/dongyan/.oh-my-zsh/plugins/osx
+drwxr-xr-x    5 dongyan  admin    170  4 15 11:38 /usr/local/share/zsh/site-functions
+drwxr-xr-x  981 root     wheel  33354  7 31  2016 /usr/share/zsh/5.2/functions
+drwxr-xr-x    2 root     wheel     68  7 31  2016 /usr/share/zsh/site-functions
+
+oh-my-zsh installation:
+-rw-r--r--  1 dongyan  staff   35699 12  2  2015 /Users/dongyan/.zcompdump-Dong的MacBook Pro-5.0.5
+-rw-r--r--  1 dongyan  staff   38444  4 15 14:19 /Users/dongyan/.zcompdump-Dong的MacBook Pro-5.2
+-rw-r--r--  1 dongyan  staff      17  4 14 10:52 /Users/dongyan/.zsh-update
+-rw-------  1 dongyan  staff  253892  5 15 13:25 /Users/dongyan/.zsh_history
+-rw-r--r--  1 dongyan  staff    2997  5 14 23:23 /Users/dongyan/.zshrc
+drwxr-xr-x  16 dongyan  staff  544  5 12 12:59 /Users/dongyan/.oh-my-zsh
+
+oh-my-zsh git state:
+HEAD: 291e96dcd034750fbe7473482508c08833b168e3
+origin	https://github.com/robbyrussell/oh-my-zsh.git (fetch)
+origin	https://github.com/robbyrussell/oh-my-zsh.git (push)
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+291e96d HEAD@{Fri May 12 12:59:26 2017 +0800}: pull --rebase --stat origin master: checkout 291e96dcd034750fbe7473482508c08833b168e3
+b908fee HEAD@{Thu Mar 9 20:00:45 2017 +0800}: pull --rebase --stat origin master: checkout b908feebcfb0ca8a9a80360d177e716c24c317d6
+97c0384 HEAD@{Thu Dec 29 13:43:21 2016 +0800}: pull --rebase --stat origin master: checkout 97c03841691021f916c46b2fd2d089d7970400aa
+2ab6738 HEAD@{Sat Aug 27 11:16:40 2016 +0800}: pull --rebase --stat origin master: checkout 2ab67382e7b6892a745f02ec4c8f84e6ac632204
+644bc64 HEAD@{Wed Jul 6 12:13:19 2016 +0800}: pull --rebase --stat origin master: checkout 644bc641ad48c74c88631d79d48ec9b6f3f5a3e5
+7fabc8b HEAD@{Wed Jun 22 16:15:51 2016 +0800}: pull --rebase --stat origin master: checkout 7fabc8bca41d4ff7090325116a85513dac852236
+2d7a451 HEAD@{Mon Jun 6 16:33:49 2016 +0800}: pull --rebase --stat origin master: checkout 2d7a451e0e9221e02c9b34e824dea959eaa6a079
+1e90f36 HEAD@{Tue May 24 12:02:22 2016 +0800}: pull --rebase --stat origin master: checkout 1e90f3618f1881d7ed5fb06fee1f2432be036350
+
+oh-my-zsh custom dir:
+   /Users/dongyan/.oh-my-zsh/custom (/Users/dongyan/.oh-my-zsh/custom)
+custom
+custom/example.zsh
+custom/plugins
+custom/plugins/example
+custom/plugins/example/example.plugin.zsh
+
+bindkey:
+"^@" set-mark-command
+"^A" beginning-of-line
+"^B" backward-char
+"^D" delete-char-or-list
+"^E" end-of-line
+"^F" forward-char
+"^G" send-break
+"^H" backward-delete-char
+"^I" expand-or-complete
+"^J" accept-line
+"^K" kill-line
+"^L" clear-screen
+"^M" accept-line
+"^N" down-line-or-history
+"^O" accept-line-and-down-history
+"^P" up-line-or-history
+"^Q" push-line
+"^R" history-incremental-search-backward
+"^S" history-incremental-search-forward
+"^T" transpose-chars
+"^U" kill-whole-line
+"^V" quoted-insert
+"^W" backward-kill-word
+"^X^B" vi-match-bracket
+"^X^E" edit-command-line
+"^X^F" vi-find-next-char
+"^X^J" vi-join
+"^X^K" kill-buffer
+"^X^N" infer-next-history
+"^X^O" overwrite-mode
+"^X^R" _read_comp
+"^X^U" undo
+"^X^V" vi-cmd-mode
+"^X^X" exchange-point-and-mark
+"^X*" expand-word
+"^X=" what-cursor-position
+"^X?" _complete_debug
+"^XC" _correct_filename
+"^XG" list-expand
+"^Xa" _expand_alias
+"^Xc" _correct_word
+"^Xd" _list_expansions
+"^Xe" _expand_word
+"^Xg" list-expand
+"^Xh" _complete_help
+"^Xm" _most_recent_file
+"^Xn" _next_tags
+"^Xr" history-incremental-search-backward
+"^Xs" history-incremental-search-forward
+"^Xt" _complete_tag
+"^Xu" undo
+"^X~" _bash_list-choices
+"^Y" yank
+"^[^D" list-choices
+"^[^G" send-break
+"^[^H" backward-kill-word
+"^[^I" self-insert-unmeta
+"^[^J" self-insert-unmeta
+"^[^L" clear-screen
+"^[^M" self-insert-unmeta
+"^[^_" copy-prev-word
+"^[ " expand-history
+"^[!" expand-history
+"^[\"" quote-region
+"^[\$" spell-word
+"^['" quote-line
+"^[," _history-complete-newer
+"^[-" neg-argument
+"^[." insert-last-word
+"^[/" _history-complete-older
+"^[0" digit-argument
+"^[1" digit-argument
+"^[2" digit-argument
+"^[3" digit-argument
+"^[4" digit-argument
+"^[5" digit-argument
+"^[6" digit-argument
+"^[7" digit-argument
+"^[8" digit-argument
+"^[9" digit-argument
+"^[<" beginning-of-buffer-or-history
+"^[>" end-of-buffer-or-history
+"^[?" which-command
+"^[A" accept-and-hold
+"^[B" backward-word
+"^[C" capitalize-word
+"^[D" kill-word
+"^[F" forward-word
+"^[G" get-line
+"^[H" run-help
+"^[L" down-case-word
+"^[N" history-search-forward
+"^[OA" up-line-or-history
+"^[OB" down-line-or-history
+"^[OC" forward-char
+"^[OD" backward-char
+"^[P" history-search-backward
+"^[Q" push-line
+"^[S" spell-word
+"^[T" transpose-words
+"^[U" up-case-word
+"^[W" copy-region-as-kill
+"^[[1;5C" forward-word
+"^[[1;5D" backward-word
+"^[[1~" beginning-of-line
+"^[[200~" bracketed-paste
+"^[[3~" delete-char
+"^[[4~" end-of-line
+"^[[5~" up-line-or-history
+"^[[6~" down-line-or-history
+"^[[A" up-line-or-beginning-search
+"^[[B" down-line-or-beginning-search
+"^[[C" forward-char
+"^[[D" backward-char
+"^[[Z" reverse-menu-complete
+"^[_" insert-last-word
+"^[a" accept-and-hold
+"^[b" backward-word
+"^[c" capitalize-word
+"^[d" kill-word
+"^[f" forward-word
+"^[g" get-line
+"^[h" run-help
+"^[l" "ls^J"
+"^[m" copy-prev-shell-word
+"^[n" history-search-forward
+"^[p" history-search-backward
+"^[q" push-line
+"^[s" spell-word
+"^[t" transpose-words
+"^[u" up-case-word
+"^[w" kill-region
+"^[x" execute-named-cmd
+"^[y" yank-pop
+"^[z" execute-last-named-cmd
+"^[|" vi-goto-column
+"^[~" _bash_complete-word
+"^[^?" backward-kill-word
+"^_" undo
+" " magic-space
+"!"-"~" self-insert
+"^?" backward-delete-char
+"\M-^@"-"\M-^?" self-insert
+
+infocmp:
+#	Reconstructed via infocmp from file: /usr/share/terminfo/6c/linux
+linux|linux console,
+	auto_right_margin, back_color_erase, can_change,
+	eat_newline_glitch, erase_overstrike, move_insert_mode,
+	move_standout_mode, xon_xoff,
+	init_tabs#8, max_colors#8, max_pairs#64,
+	no_color_video#18,
+	acs_chars=+\020\054\021-\030.^Y0\333`\004a\261f\370g\361h\260i\316j\331k\277l\332m\300n\305o~p\304q\304r\304s_t\303u\264v\301w\302x\263y\363z\362{\343|\330}\234~\376,
+	bell=^G, carriage_return=^M,
+	change_scroll_region=\E[%i%p1%d;%p2%dr,
+	clear_all_tabs=\E[3g, clear_screen=\E[H\E[J,
+	clr_bol=\E[1K, clr_eol=\E[K, clr_eos=\E[J,
+	column_address=\E[%i%p1%dG,
+	cursor_address=\E[%i%p1%d;%p2%dH, cursor_down=^J,
+	cursor_home=\E[H, cursor_invisible=\E[?25l\E[?1c,
+	cursor_left=^H, cursor_normal=\E[?25h\E[?0c,
+	cursor_right=\E[C, cursor_up=\E[A,
+	cursor_visible=\E[?25h\E[?8c, delete_character=\E[P,
+	delete_line=\E[M, enter_alt_charset_mode=\E[11m,
+	enter_am_mode=\E[?7h, enter_blink_mode=\E[5m,
+	enter_bold_mode=\E[1m, enter_dim_mode=\E[2m,
+	enter_insert_mode=\E[4h,
+	enter_pc_charset_mode=\E[11m,
+	enter_reverse_mode=\E[7m, enter_standout_mode=\E[7m,
+	enter_underline_mode=\E[4m, erase_chars=\E[%p1%dX,
+	exit_alt_charset_mode=\E[10m, exit_am_mode=\E[?7l,
+	exit_attribute_mode=\E[0;10m, exit_insert_mode=\E[4l,
+	exit_pc_charset_mode=\E[10m,
+	exit_standout_mode=\E[27m,
+	exit_underline_mode=\E[24m,
+	flash_screen=\E[?5h\E[?5l$<200/>,
+	initialize_color=\E]P%p1%x%p2%{256}%*%{1000}%/%02x%p3%{256}%*%{1000}%/%02x%p4%{256}%*%{1000}%/%02x,
+	insert_character=\E[@, insert_line=\E[L, key_b2=\E[G,
+	key_backspace=\177, key_btab=\E[Z, key_dc=\E[3~,
+	key_down=\E[B, key_end=\E[4~, key_f1=\E[[A,
+	key_f10=\E[21~, key_f11=\E[23~, key_f12=\E[24~,
+	key_f13=\E[25~, key_f14=\E[26~, key_f15=\E[28~,
+	key_f16=\E[29~, key_f17=\E[31~, key_f18=\E[32~,
+	key_f19=\E[33~, key_f2=\E[[B, key_f20=\E[34~,
+	key_f3=\E[[C, key_f4=\E[[D, key_f5=\E[[E, key_f6=\E[17~,
+	key_f7=\E[18~, key_f8=\E[19~, key_f9=\E[20~,
+	key_home=\E[1~, key_ic=\E[2~, key_left=\E[D,
+	key_mouse=\E[M, key_npage=\E[6~, key_ppage=\E[5~,
+	key_right=\E[C, key_suspend=^Z, key_up=\E[A,
+	newline=^M^J, orig_colors=\E]R, orig_pair=\E[39;49m,
+	parm_dch=\E[%p1%dP, parm_delete_line=\E[%p1%dM,
+	parm_ich=\E[%p1%d@, parm_insert_line=\E[%p1%dL,
+	reset_1string=\Ec\E]R, restore_cursor=\E8,
+	row_address=\E[%i%p1%dd, save_cursor=\E7,
+	scroll_forward=^J, scroll_reverse=\EM,
+	set_a_background=\E[4%p1%dm,
+	set_a_foreground=\E[3%p1%dm,
+	set_attributes=\E[0;10%?%p1%t;7%;%?%p2%t;4%;%?%p3%t;7%;%?%p4%t;5%;%?%p5%t;2%;%?%p6%t;1%;%?%p7%t;8%;%?%p9%t;11%;m,
+	set_tab=\EH, tab=^I, user6=\E[%i%d;%dR, user7=\E[6n,
+	user8=\E[?6c, user9=\E[c,
+
+Zsh configuration files:
+ls: /Users/dongyan/.bash_logout: No such file or directory
+ls: /Users/dongyan/.bashrc: No such file or directory
+ls: /Users/dongyan/.profile: No such file or directory
+ls: /Users/dongyan/.zlogin: No such file or directory
+ls: /Users/dongyan/.zlogout: No such file or directory
+ls: /Users/dongyan/.zprofile: No such file or directory
+ls: /Users/dongyan/.zsh.pre-oh-my-zsh: No such file or directory
+ls: /Users/dongyan/.zshenv: No such file or directory
+ls: /etc/zlogin: No such file or directory
+ls: /etc/zlogout: No such file or directory
+ls: /etc/zshenv: No such file or directory
+-rw-r--r--  1 dongyan  staff   362  4 27 18:28 /Users/dongyan/.bash_profile
+-rw-r--r--  1 dongyan  staff  2997  5 14 23:23 /Users/dongyan/.zshrc
+-r--r--r--  1 root     wheel   265  7 31  2016 /etc/bashrc
+-r--r--r--  1 root     wheel   322  6  7  2016 /etc/profile
+-r--r--r--  1 root     wheel   126  7 31  2016 /etc/zprofile
+-r--r--r--  1 root     wheel   140  7 31  2016 /etc/zshrc
+
+File '/etc/zshenv' does not exist
+========== /etc/zprofile ==========
+# system-wide environment settings for zsh(1)
+if [ -x /usr/libexec/path_helper ]; then
+	eval `/usr/libexec/path_helper -s`
+fi
+========== end /etc/zprofile ==========
+
+========== /etc/zshrc ==========
+# Correctly display UTF-8 with combining characters.
+if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
+	setopt combiningchars
+fi
+
+disable log
+========== end /etc/zshrc ==========
+
+File '/etc/zlogin' does not exist
+File '/etc/zlogout' does not exist
+File '/Users/dongyan/.zshenv' does not exist
+File '/Users/dongyan/.zprofile' does not exist
+========== /Users/dongyan/.zshrc ==========
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/dongyan/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="amuse"
+#ZSH_THEME="robbyrussell"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git osx kubectl)
+
+# User configuration
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin"
+export GOPATH=/Users/dongyan/Documents/gopath
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+# eval $(minikube docker-env)
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+========== end /Users/dongyan/.zshrc ==========
+
+File '/Users/dongyan/.zlogin' does not exist
+File '/Users/dongyan/.zlogout' does not exist
+File '/Users/dongyan/.zsh.pre-oh-my-zsh' does not exist
+========== /etc/bashrc ==========
+# System-wide .bashrc file for interactive bash(1) shells.
+if [ -z "$PS1" ]; then
+   return
+fi
+
+PS1='\h:\W \u\$ '
+# Make bash check its window size after a process completes
+shopt -s checkwinsize
+
+[ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
+========== end /etc/bashrc ==========
+
+========== /etc/profile ==========
+# System-wide .profile for sh(1)
+
+if [ -x /usr/libexec/path_helper ]; then
+	eval `/usr/libexec/path_helper -s`
+fi
+
+if [ "${BASH-no}" != "no" ]; then
+	[ -r /etc/bashrc ] && . /etc/bashrc
+fi
+
+export PATH=$PATH:/Users/dongyan/Documents/tools/apache-maven-3.3.3/bin:/Users/dongyan/Documents/tools/mongodb-osx-x86_64-3.0.3/bin
+========== end /etc/profile ==========
+
+File '/Users/dongyan/.bashrc' does not exist
+File '/Users/dongyan/.profile' does not exist
+========== /Users/dongyan/.bash_profile ==========
+alias ll='ls -lh'
+alias l='ls -lh'
+alias mylock='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+export GOPATH=/Users/dongyan/Documents/gopath
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+export REPOS=/Users/dongyan/repos
+source /usr/local/etc/bash_completion
+source <(kubectl completion bash)
+========== end /Users/dongyan/.bash_profile ==========
+
+File '/Users/dongyan/.bash_logout' does not exist
+
+Zsh compdump files:
+-rw-r--r--  1 dongyan  staff  35699 12  2  2015 /Users/dongyan/.zcompdump-Dong的MacBook Pro-5.0.5
+-rw-r--r--  1 dongyan  staff  38444  4 15 14:19 /Users/dongyan/.zcompdump-Dong的MacBook Pro-5.2
