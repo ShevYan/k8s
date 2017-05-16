@@ -7,6 +7,22 @@
 - 启动时必须指定json环境变量，然后后面跟java -jar xxxx.jar
 ```
 SPRING_APPLICATION_JSON='{
+	"spring.profiles":"$HOSTNAME",
+	"server.port":8761,
+	"eureka.instance.hostname":"$HOSTNAME",
+	"eureka.client.serviceUrl.defaultZone":"http://peer1:8761/eureka,http://peer2:8761/eureka"
+}'
+```
+
+SPRING_APPLICATION_JSON={\
+	"spring.profiles":"$(hostname)",\
+	"server.port":8761,\
+	"eureka.instance.hostname":"$(hostname)",\
+	"eureka.client.serviceUrl.defaultZone":"http://peer1:8761/eureka,http://peer2:8761/eureka"\
+}
+
+```
+SPRING_APPLICATION_JSON='{
 	"spring.profiles":"peer1",
 	"server.port":8661,
 	"eureka.instance.hostname":"peer1",
