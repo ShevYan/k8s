@@ -1,0 +1,34 @@
+server:
+  port: 8082
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8661/eureka,http://localhost:8662/eureka
+---
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api
+#  Uncomment to disable auto-registering all services read from Eureka
+#  ignoredServices: '*'
+  routes:
+    test:
+      path: /redirect/**
+      url: http://google.com
+    customer-by-address:
+      path: /customer-by-address/**
+      url: http://localhost:9098
+    customer-by-service:
+      path: /payment/**
+      serviceId: payment
+    static:
+      path: /static/**
+---
+spring:
+  application:
+    name: zuul
+
+---
+management:
+  security:
+    enabled: false

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: paymentweb
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8661/eureka,http://localhost:8662/eureka
+
+---
+server:
+  port: 8080
+
+---
+management:
+  security:
+    enabled: false

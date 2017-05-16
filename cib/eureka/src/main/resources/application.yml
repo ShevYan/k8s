@@ -1,0 +1,11 @@
+eureka:
+  instance:
+    appname: eureka
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+
+---
+management:
+  security:
+    enabled: false

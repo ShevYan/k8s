@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: /Users/dongyan/Downloads/spring/gs-centralized-configuration/initial/config-server
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8661/eureka,http://localhost:8662/eureka
+
+---
+server:
+  port: 8888
+
+---
+management:
+  security:
+    enabled: false
