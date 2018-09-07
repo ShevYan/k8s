@@ -142,14 +142,33 @@ shadowsocks-server-linux64-1.1.5 -c ./shadowsocks.json
 ```
 
 #### 2.2 其他系统（GUI）
-统一使用可视化客户端，配置如下：
 
+** 配置客户端
+![连接服务器](resource/server-config.jpg)
 
-### pac设置
-pac是一段自动代理脚本，可以根据ip和访问的url判断是否使用代理，可参考：
-pac例子： http://s.xcai.net/pac.js
+** 配置PAC
+开启PAC模式，该模式会自动选择哪些通过SS，哪些直连
+同时同步GFW List更新PAC
+可手动编辑需要走代理的网站
+![PAC配置](resource/pac-config1.jpg)
+![PAC配置](resource/pac-config2.jpg)
 
-## minikube和docker配置
+** 设置HTTP代理，让HTTP走Ss通道
+![HTTP代理](resource/http-proxy-config.jpg)
+
+#### 使用配置
+SS是局部代理，每个软件都需要单独设置代理，如果软件可以设置Socks5代理，可以直接设定，如果不能设定可设置http/https代理。
+** 浏览器
+使用 SwitchyOmega，然后设置为系统代理即可，然后所有通过ShadowSock的客户端来进行控制。
+
+** Shell
+直接在.bashrc或者.zshrc添加下面内容:
+```
+export http_proxy="http://localhost:port"
+export https_proxy="http://localhost:port"
+```
+
+** minikube和docker配置
 ---
 两者一般在国内都用不了，都需要设置代理，具体可以参考：
 ```
