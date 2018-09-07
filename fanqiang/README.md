@@ -4,6 +4,8 @@
 
 Socks和Http都是代理协议，都只是针对浏览器和http访问的，跟vpn有本质的差异，vpn是从2-3层打通网络，所以是能够ping通的，而socks和http不会影响ping。因此，一般软件都需要设置代理，通常是http_proxy和https_proxy环境变量。比如git就可以配置代理。
 
+![整体架构](resource/arch.png)
+
 ##  第一步，选定机房和线路
 ---
 ### 地域
@@ -144,17 +146,19 @@ shadowsocks-server-linux64-1.1.5 -c ./shadowsocks.json
 #### 2.2 其他系统（GUI）
 
 + 配置客户端
-![连接服务器](resource/server-config.jpg)
+![连接服务器](resource/server-config.png)
 
 + 配置PAC
 开启PAC模式，该模式会自动选择哪些通过SS，哪些直连
 同时同步GFW List更新PAC
 可手动编辑需要走代理的网站
-![PAC配置](resource/pac-config1.jpg)
-![PAC配置](resource/pac-config2.jpg)
+![PAC配置](resource/pac-config1.png)
+![PAC配置](resource/pac-config2.png)
 
 + 设置HTTP代理，让HTTP走Ss通道
-![HTTP代理](resource/http-proxy-config.jpg)
+![HTTP代理](resource/http-proxy.png)
+
+配置完毕后，重启ShadowSocks客户端，使配置生效
 
 #### 使用配置
 SS是局部代理，每个软件都需要单独设置代理，如果软件可以设置Socks5代理，可以直接设定，如果不能设定可设置http/https代理。
@@ -164,8 +168,14 @@ SS是局部代理，每个软件都需要单独设置代理，如果软件可以
 + Shell
 直接在.bashrc或者.zshrc添加下面内容:
 ```
-export http_proxy="http://localhost:port"
-export https_proxy="http://localhost:port"
+export http_proxy="http://127.0.0.1:1080"
+export https_proxy="http://127.0.0.1:1080"
+```
+
++ git 配置
+```
+git config --global http.proxy 'http://127.0.0.1:1080' 
+git config --global https.proxy 'http://127.0.0.1:1080'
 ```
 
 ** minikube和docker配置
