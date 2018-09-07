@@ -145,17 +145,17 @@ shadowsocks-server-linux64-1.1.5 -c ./shadowsocks.json
 
 #### 2.2 其他系统（GUI）
 
-+ 配置客户端
++ 配置客户端  
 ![连接服务器](resource/server-config.png)
 
-+ 配置PAC
++ 配置PAC  
 开启PAC模式，该模式会自动选择哪些通过SS，哪些直连
 同时同步GFW List更新PAC
-可手动编辑需要走代理的网站
+可手动编辑需要走代理的网站  
 ![PAC配置](resource/pac-config1.png)
 ![PAC配置](resource/pac-config2.png)
 
-+ 设置HTTP代理，让HTTP走Ss通道
++ 设置HTTP代理，让HTTP走Ss通道  
 ![HTTP代理](resource/http-proxy.png)
 
 配置完毕后，重启ShadowSocks客户端，使配置生效
