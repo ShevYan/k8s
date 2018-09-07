@@ -132,19 +132,18 @@ shadowsocks-server-linux64-1.1.5 -c ./shadowsocks.json
 https://linuxconfig.org/how-to-automatically-execute-shell-script-at-startup-boot-on-systemd-linux
 
 ### 2. 客户端
+
+下载地址：
+https://shadowsocks.org/en/download/clients.html
+
+#### 2.1 Linux系统
 ```
 shadowsocks-server-linux64-1.1.5 -c ./shadowsocks.json
 ```
-mac下可以通过automator配置自启动程序，启动成功后就启动了socks5代理，然后指向客户端地址，如：127.0.0.1:1405即可。
 
-### 3. http代理
-由于socks5代理速度快，可以通过privoxy将http代理转为socks5代理，安装完后，找到config文件，然后注释掉原来的listen-address，在最后加入：
-```
-listen-address  0.0.0.0:8118
-forward-socks5   /               127.0.0.1:1405 .
-```
+#### 2.2 其他系统（GUI）
+统一使用可视化客户端，配置如下：
 
-至此，本机http代理也声称，后续的http/https都可指向127.0.0.1:8118，或ip:8118地址
 
 ### pac设置
 pac是一段自动代理脚本，可以根据ip和访问的url判断是否使用代理，可参考：
