@@ -116,7 +116,7 @@ https://github.com/shadowsocks/shadowsocks-go
 ```
 cat shadowsocks.json
 {
-    "server":"192.157.192.2",
+    "server":"192.157.xxx.xxx",
     "server_port":33124,
     "local_address": "127.0.0.1",
     "local_port":1405,
@@ -144,6 +144,8 @@ shadowsocks-server-linux64-1.1.5 -c ./shadowsocks.json
 ```
 
 #### 2.2 其他系统（GUI）
+每个系统的GUI界面有所不同，主要包括服务器配置，HTTP代理配置，和PAC配置，大同小异。
+
 
 + 配置客户端  
 ![连接服务器](resource/server-config.png)
@@ -163,7 +165,8 @@ shadowsocks-server-linux64-1.1.5 -c ./shadowsocks.json
 #### 使用配置
 SS是局部代理，每个软件都需要单独设置代理，如果软件可以设置Socks5代理，可以直接设定，如果不能设定可设置http/https代理。
 + 浏览器
-使用 SwitchyOmega，然后设置为系统代理即可，然后所有通过ShadowSock的客户端来进行控制。
+使用 SwitchyOmega，然后设置为系统代理即可，然后所有通过ShadowSock的客户端来进行控制。   
+![HTTP代理](resource/switch-omega-proxy.png)
 
 + Shell
 直接在.bashrc或者.zshrc添加下面内容:
